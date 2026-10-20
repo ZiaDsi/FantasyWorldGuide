@@ -1,0 +1,898 @@
+
+/* GENERAL PAGE DESIGN */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    background: radial-gradient(
+        circle at top,
+        #273127 0%,
+        #101315 65%,
+        #090b0d 100%
+    );
+
+    color: #F1E5CB;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+/* MAIN TITLE */
+
+h1 {
+    color: #B9975B;
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 18px #000000;
+}
+
+/* WELCOME DESCRIPTION */
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 25px auto 65px;
+    color: #D6CEBC;
+}
+
+/* MAIN MENU HEADING */
+
+h2 {
+    color: #B9975B;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+/* MENU BUTTONS */
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 15px auto;
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #342A1B,
+        #1C1C1A
+    );
+
+    color: #F1E5CB;
+    border: 1px solid #B9975B;
+    border-radius: 8px;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+
+button:hover {
+    background: #B9975B;
+    color: #101315;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #00000080;
+}
+
+/* KEYBOARD FOCUS */
+
+button:focus-visible {
+    outline: 3px solid #F1E5CB;
+    outline-offset: 4px;
+}
+
+
+/* FANTASY SUBGENRE CARDS */
+
+.genreCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.genreCards button {
+    width: 100%;
+    max-width: none;
+    min-height: 180px;
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: linear-gradient(
+        145deg,
+        #283127,
+        #171A18
+    );
+
+    border: 1px solid #B9975B;
+    border-radius: 14px;
+}
+
+/* SUBGENRE INFORMATION */
+
+.genreDetail {
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 30px 20px;
+    background: #1B201D;
+    border: 1px solid #665438;
+    border-radius: 14px;
+}
+
+.genreDetail p {
+    margin: 20px auto 35px;
+}
+
+.genreDetail ul {
+    max-width: 450px;
+    margin: 0 auto 40px;
+    padding-left: 25px;
+
+    color: #D6CEBC;
+    text-align: left;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+
+    .genreCards {
+        grid-template-columns: 1fr;
+    }
+
+    .genreCards button {
+        min-height: 100px;
+    }
+
+}
+
+/* BOOK RECOMMENDATION MENU */
+
+.bookMenuButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.bookMenuButtons button {
+    width: 100%;
+    max-width: none;
+    min-height: 130px;
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* BOOK LIST */
+
+.bookGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+
+/* INDIVIDUAL BOOK CARD */
+
+.bookCard {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+    background: #1B201D;
+
+    border: 1px solid #665438;
+    border-radius: 14px;
+
+    text-align: left;
+}
+
+
+/* BOOK COVER PLACEHOLDERS */
+
+.bookCover {
+    width: 110px;
+    height: 160px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #F1E5CB;
+    font-size: 22px;
+    font-weight: bold;
+
+    border: 2px solid #B9975B;
+    border-radius: 5px;
+
+    box-shadow: 5px 6px 15px #00000080;
+}
+
+
+/* COVER COLORS */
+
+.coverEpic {
+    background: linear-gradient(145deg, #354B40, #142923);
+}
+
+.coverDark {
+    background: linear-gradient(145deg, #623B38, #241616);
+}
+
+.coverUrban {
+    background: linear-gradient(145deg, #405273, #192337);
+}
+
+
+/* BOOK INFORMATION */
+
+.bookInfo {
+    flex: 1;
+}
+
+.bookInfo h2 {
+    color: #B9975B;
+    font-size: 25px;
+    margin: 0 0 12px;
+}
+
+.bookInfo p {
+    margin: 10px 0;
+    max-width: none;
+    text-align: left;
+}
+
+.bookAuthor {
+    color: #C9A978;
+    font-style: italic;
+}
+
+.bookSummary {
+    color: #D6CEBC;
+    line-height: 1.7;
+}
+
+
+/* MOBILE DESIGN */
+
+@media (max-width: 700px) {
+
+    .bookMenuButtons {
+        grid-template-columns: 1fr;
+    }
+
+    .bookCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bookInfo p {
+        text-align: center;
+    }
+
+}
+
+/* ACTUAL BOOK COVER IMAGES */
+
+img.bookCover {
+    display: block;
+    width: 110px;
+    height: 160px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 2px solid #B9975B;
+    border-radius: 5px;
+
+    transition: transform 0.3s ease;
+}
+
+/* COVER HOVER EFFECT */
+
+.bookCard:hover img.bookCover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   HOMEPAGE HERO SECTION
+   ========================= */
+
+.heroPage {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(7, 10, 14, 0.72), rgba(7, 10, 14, 0.78)),
+        url("images/hero_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroOverlay {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+.heroContent {
+    max-width: 900px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.heroTag {
+    color: #D9B36A;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.heroContent h1 {
+    font-size: 72px;
+    color: #D9B36A;
+    margin-bottom: 20px;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.heroSubtitle {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    font-size: 24px;
+    line-height: 1.8;
+    color: #F2E6CF;
+}
+
+.heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.heroButtons button {
+    min-width: 240px;
+    padding: 18px 28px;
+    font-size: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 46px;
+    }
+
+    .heroSubtitle {
+        font-size: 20px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroButtons button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* FIX HOMEPAGE SPACING */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Keep the homepage full screen */
+
+.heroPage {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Prevent the overlay from adding extra height */
+
+.heroOverlay {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Keep comfortable spacing on other pages */
+
+#introduction,
+#subgenres,
+#recommendations {
+    padding: 90px 20px;
+}
+
+/* Preserve JavaScript navigation */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* BACKGROUND FOR THE ENTIRE WEBSITE */
+
+body {
+    background-image:
+        linear-gradient(
+            rgba(7, 10, 14, 0.72),
+            rgba(7, 10, 14, 0.78)
+        ),
+        url("images/hero_bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* USE THE BODY BACKGROUND ON THE HOMEPAGE */
+
+.heroPage {
+    background: transparent;
+}
+
+/* =========================
+   FANTASY TYPOGRAPHY
+   ========================= */
+
+/* Main body and descriptions */
+
+body,
+button {
+    font-family: 'Lora', Georgia, serif;
+}
+
+/* Titles and headings */
+
+h1,
+h2,
+.heroTag {
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Homepage title */
+
+.heroContent h1 {
+    font-size: clamp(32px, 5vw, 72px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    overflow-wrap: anywhere;
+}
+
+/* Small text above the title */
+
+.heroTag {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* Homepage description */
+
+.heroSubtitle {
+    font-size: 21px;
+    line-height: 1.9;
+}
+
+/* Genre and book headings */
+
+.bookInfo h2 {
+    font-size: 23px;
+    letter-spacing: 0.5px;
+}
+
+/* Smaller screens */
+
+@media (max-width: 768px) {
+
+    .heroContent h1 {
+        font-size: clamp(28px, 7vw, 46px);
+        letter-spacing: 1px;
+    }
+
+    .heroSubtitle {
+        font-size: 17px;
+    }
+
+}
+
+/* =========================
+   HOMEPAGE ENTRANCE ANIMATIONS
+   ========================= */
+
+/* Define the animation */
+
+@keyframes heroFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Apply the animation */
+
+.heroTag,
+.heroContent h1,
+.heroSubtitle,
+.heroButtons {
+
+    opacity: 0;
+
+    animation: heroFadeUp 0.7s ease-out forwards;
+
+}
+
+
+/* Control when each element appears */
+
+.heroTag {
+    animation-delay: 0.1s;
+}
+
+.heroContent h1 {
+    animation-delay: 0.25s;
+}
+
+.heroSubtitle {
+    animation-delay: 0.45s;
+}
+
+.heroButtons {
+    animation-delay: 0.65s;
+}
+
+
+/* Accessibility: Reduce motion when requested */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .heroTag,
+    .heroContent h1,
+    .heroSubtitle,
+    .heroButtons {
+
+        animation: none;
+        opacity: 1;
+        transform: none;
+
+    }
+
+}
+
+/* =================================
+   FANTASY CARD HOVER EFFECTS
+   ================================= */
+
+/* Smooth transitions */
+
+.genreCards button,
+.bookMenuButtons button,
+.bookCard {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Subgenre and recommendation menu cards */
+
+@media (hover: hover) {
+
+    .genreCards button:hover,
+    .bookMenuButtons button:hover {
+        transform: translateY(-6px);
+
+        background: linear-gradient(
+            145deg,
+            #493821,
+            #23241E
+        );
+
+        color: #F1E5CB;
+        border-color: #D9B36A;
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.5),
+            0 0 18px rgba(185, 151, 91, 0.2);
+    }
+
+    /* Book recommendation cards */
+
+    .bookCard:hover {
+        transform: translateY(-5px);
+
+        border-color: #D9B36A;
+
+        background: #242923;
+
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.45),
+            0 0 15px rgba(185, 151, 91, 0.12);
+    }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .genreCards button,
+    .bookMenuButtons button,
+    .bookCard {
+        transition: none;
+    }
+
+    .genreCards button:hover,
+    .bookMenuButtons button:hover,
+    .bookCard:hover {
+        transform: none;
+    }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    /* Background image */
+
+    body {
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    /* Homepage */
+
+    .heroPage,
+    .heroOverlay {
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    .heroOverlay {
+        padding: 35px 15px;
+    }
+
+    .heroContent {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .heroContent h1 {
+        font-size: clamp(24px, 6vw, 42px);
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+
+    .heroTag {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .heroSubtitle {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    /* Navigation buttons */
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .heroButtons button {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    /* Other pages */
+
+    #introduction,
+    #subgenres,
+    #recommendations {
+        padding: 50px 15px;
+    }
+
+    /* Fantasy category menus */
+
+    .genreCards,
+    .bookMenuButtons {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 440px;
+        gap: 15px;
+    }
+
+    .genreCards button,
+    .bookMenuButtons button {
+        min-height: 95px;
+        font-size: 19px;
+    }
+
+    /* Book recommendation cards */
+
+    .bookGrid {
+        width: 100%;
+    }
+
+    .bookCard {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .bookInfo {
+        width: 100%;
+    }
+
+    .bookInfo h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bookInfo p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* Book cover images */
+
+    img.bookCover {
+        width: 135px;
+        height: 198px;
+    }
+
+}
+
+/* =====================================
+   MOBILE PAGE LAYOUT FIXES
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    /* Fix page dimensions */
+
+    #introduction,
+    #subgenres,
+    #recommendations {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 50px 16px 60px;
+    }
+
+
+    /* Fix large headings */
+
+    #introduction h1,
+    #subgenres h1,
+    #recommendations h1 {
+        font-size: clamp(25px, 6.8vw, 36px);
+        letter-spacing: 1px;
+        line-height: 1.3;
+
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+
+        margin: 0 auto 25px;
+    }
+
+
+    /* Special fix for Book Recommendations */
+
+    #recommendations h1 {
+        font-size: clamp(23px, 6vw, 32px);
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Better introduction spacing */
+
+    #introduction > p,
+    #genreMenu > p,
+    #bookMenu > p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 0 auto 35px;
+    }
+
+
+    /* Keep cards inside screen boundaries */
+
+    .genreCards,
+    .bookMenuButtons,
+    .genreDetail,
+    .bookDetail,
+    .bookGrid,
+    .bookCard {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Fix menu spacing */
+
+    .genreCards,
+    .bookMenuButtons {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+
+    /* Prevent long book titles from overflowing */
+
+    .bookInfo {
+        min-width: 0;
+    }
+
+    .bookInfo h2 {
+        overflow-wrap: anywhere;
+    }
+
+}
+
+
+/* Prevent white background outside page */
+
+html {
+    background-color: #101315;
+}

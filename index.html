@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FantasyWorldGuide</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+<!-- MAIN MENU -->
+
+<div id="mainMenu" class="heroPage">
+
+    <div class="heroOverlay">
+
+        <div class="heroContent">
+
+            <p class="heroTag">A journey through magical worlds</p>
+
+            <h1>Fantasy World Guide</h1>
+
+            <p class="heroSubtitle">
+                Explore fantasy literature, discover subgenres,
+                and find your next favorite book or series.
+            </p>
+
+            <div class="heroButtons">
+
+                <button onclick="showPage('introduction')">
+                    What is Fantasy?
+                </button>
+
+                <button onclick="showPage('subgenres')">
+                    Explore Subgenres
+                </button>
+
+                <button onclick="showPage('recommendations')">
+                    Get Book Recommendations
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FANTASY INTRODUCTION -->
+
+<div id="introduction" hidden>
+
+    <h1>What is Fantasy?</h1>
+
+    <p>
+        Fantasy is a genre of fiction that explores
+        imaginary worlds, magic, and supernatural
+        elements.
+    </p>
+
+    <button onclick="goBack()">
+        Back to Main Menu
+    </button>
+
+</div>
+
+
+<!-- FANTASY SUBGENRES -->
+
+
+<!-- FANTASY SUBGENRES -->
+
+<div id="subgenres" hidden>
+
+    <!-- SUBGENRE MENU -->
+
+    <div id="genreMenu">
+
+        <h1>Explore Fantasy Subgenres</h1>
+
+        <p>Choose a subgenre to explore its
+           characteristics and discover what
+           makes it unique.</p>
+
+        <div class="genreCards">
+
+            <button onclick="showGenre('epicFantasy')">
+                Epic Fantasy
+            </button>
+
+            <button onclick="showGenre('darkFantasy')">
+                Dark Fantasy
+            </button>
+
+            <button onclick="showGenre('urbanFantasy')">
+                Urban Fantasy
+            </button>
+
+        </div>
+
+        <button onclick="goBack()">
+            Back to Main Menu
+        </button>
+
+    </div>
+
+
+    <!-- EPIC FANTASY -->
+
+    <div id="epicFantasy" class="genreDetail" hidden>
+
+        <h1>Epic Fantasy</h1>
+
+        <p>
+            Epic Fantasy focuses on expansive
+            imaginary worlds, large-scale
+            conflicts, and extraordinary adventures.
+        </p>
+
+        <h2>Common Elements</h2>
+
+        <ul>
+            <li>Detailed worldbuilding</li>
+            <li>Magic and mythical creatures</li>
+            <li>Kingdoms, wars, and political conflicts</li>
+        </ul>
+
+        <button onclick="backToGenres()">
+            Back to Subgenres
+        </button>
+
+    </div>
+
+
+    <!-- DARK FANTASY -->
+
+    <div id="darkFantasy" class="genreDetail" hidden>
+
+        <h1>Dark Fantasy</h1>
+
+        <p>
+            Dark Fantasy combines fantasy elements
+            with darker themes, unsettling
+            atmospheres, and moral complexity.
+        </p>
+
+        <h2>Common Elements</h2>
+
+        <ul>
+            <li>Horror-inspired atmosphere</li>
+            <li>Morally complex characters</li>
+            <li>Dangerous supernatural forces</li>
+        </ul>
+
+        <button onclick="backToGenres()">
+            Back to Subgenres
+        </button>
+
+    </div>
+
+
+    <!-- URBAN FANTASY -->
+
+    <div id="urbanFantasy" class="genreDetail" hidden>
+
+        <h1>Urban Fantasy</h1>
+
+        <p>
+            Urban Fantasy introduces magic and
+            supernatural elements into modern
+            or recognizable urban environments.
+        </p>
+
+        <h2>Common Elements</h2>
+
+        <ul>
+            <li>Modern cities</li>
+            <li>Hidden magical communities</li>
+            <li>Supernatural mysteries</li>
+        </ul>
+
+        <button onclick="backToGenres()">
+            Back to Subgenres
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- BOOK RECOMMENDATIONS -->
+
+
+<!-- BOOK RECOMMENDATIONS -->
+
+<div id="recommendations" hidden>
+
+    <!-- BOOK GENRE MENU -->
+
+    <div id="bookMenu">
+
+        <h1>Book Recommendations</h1>
+
+        <p>Choose your favorite fantasy subgenre
+           to discover books and series.</p>
+
+        <div class="bookMenuButtons">
+
+            <button onclick="showBookGenre('epicBooks')">
+                Epic Fantasy
+            </button>
+
+            <button onclick="showBookGenre('darkBooks')">
+                Dark Fantasy
+            </button>
+
+            <button onclick="showBookGenre('urbanBooks')">
+                Urban Fantasy
+            </button>
+
+        </div>
+
+        <button onclick="goBack()">
+            Back to Main Menu
+        </button>
+
+    </div>
+
+
+    <!-- EPIC FANTASY BOOKS -->
+
+    <div id="epicBooks" class="bookDetail" hidden>
+
+        <h1>Epic Fantasy Books</h1>
+
+        <div class="bookGrid">
+
+            <article class="bookCard">
+
+                <img
+                    class="bookCover"
+                    src="images/the_way_of_kings.jpg"
+                    alt="The Way of Kings book cover">
+
+                <div class="bookInfo">
+
+                    <h2>The Way of Kings</h2>
+
+                    <p class="bookAuthor">
+                        Brandon Sanderson
+                    </p>
+
+                    <p class="bookSummary">
+                        An epic journey in a world of
+                        storms, ancient mysteries,
+                        and powerful magic.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="bookCard">
+
+                <img class="bookCover"
+                    src="images/the_eye_of_the_world.jpg"
+                    alt="The Eye of the World book cover">
+                
+                <div class="bookInfo">
+
+                    <h2>The Eye of the World</h2>
+
+                    <p class="bookAuthor">
+                        Robert Jordan
+                    </p>
+
+                    <p class="bookSummary">
+                        A sweeping adventure involving
+                        prophecy, magic, and a vast world.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <button onclick="backToBookMenu()">
+            Back to Recommendations
+        </button>
+
+    </div>
+
+
+    <!-- DARK FANTASY BOOKS -->
+
+    <div id="darkBooks" class="bookDetail" hidden>
+
+        <h1>Dark Fantasy Books</h1>
+
+        <div class="bookGrid">
+
+            <article class="bookCard">
+
+                <img class="bookCover"
+                    src="images/the_blade_itself.jpg"
+                    alt="The Blade Itself book cover">
+
+
+                <div class="bookInfo">
+
+                    <h2>The Blade Itself</h2>
+
+                    <p class="bookAuthor">
+                        Joe Abercrombie
+                    </p>
+
+                    <p class="bookSummary">
+                        A gritty story with morally complex
+                        characters and political intrigue.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="bookCard">
+
+                <img class="bookCover"
+                    src="images/prince_of_thorns.jpg"
+                    alt="Prince of Thorns book cover">
+
+                <div class="bookInfo">
+
+                    <h2>Prince of Thorns</h2>
+
+                    <p class="bookAuthor">
+                        Mark Lawrence
+                    </p>
+
+                    <p class="bookSummary">
+                        A brutal tale of ambition,
+                        vengeance, and a ruthless
+                        young prince.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <button onclick="backToBookMenu()">
+            Back to Recommendations
+        </button>
+
+    </div>
+
+
+    <!-- URBAN FANTASY BOOKS -->
+
+    <div id="urbanBooks" class="bookDetail" hidden>
+
+        <h1>Urban Fantasy Books</h1>
+
+        <div class="bookGrid">
+
+            <article class="bookCard">
+
+                <img class="bookCover"
+                    src="images/storm_front.jpg"
+                    alt="Storm Front book cover">
+
+                <div class="bookInfo">
+
+                    <h2>Storm Front</h2>
+
+                    <p class="bookAuthor">
+                        Jim Butcher
+                    </p>
+
+                    <p class="bookSummary">
+                        A wizard detective investigates
+                        supernatural crimes in Chicago.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="bookCard">
+
+                <img class="bookCover"
+                    src="images/harry_potter.jpg"
+                    alt="Harry Potter and the Philosopher's Stone book cover">
+
+                <div class="bookInfo">
+
+                    <h2>Harry Potter and the Philosopher's Stone</h2>
+
+                    <p class="bookAuthor">
+                        J.K. Rowling
+                    </p>
+
+                    <p class="bookSummary">
+                        A young wizard discovers his magical heritage
+                        and embarks on a journey to uncover ancient secrets.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <button onclick="backToBookMenu()">
+            Back to Recommendations
+        </button>
+
+    </div>
+
+</div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
