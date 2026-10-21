@@ -1,55 +1,38 @@
+// IDs of the screens in each navigation level.
+const mainPages = ["mainMenu", "introduction", "subgenres", "recommendations"];
+const fantasyGenres = ["genreMenu", "epicFantasy", "darkFantasy", "urbanFantasy"];
+const bookGenres = ["bookMenu", "epicBooks", "darkBooks", "urbanBooks"];
 
+// Show one screen and hide the others in the same navigation level.
+function showOnly(screenIds, selectedId) {
+    for (const id of screenIds) {
+        document.getElementById(id).hidden = id !== selectedId;
+    }
+}
+
+// Main menu navigation.
 function showPage(pageId) {
-
-    document.getElementById("mainMenu").hidden = true;
-    document.getElementById("introduction").hidden = true;
-    document.getElementById("subgenres").hidden = true;
-    document.getElementById("recommendations").hidden = true;
-
-    document.getElementById(pageId).hidden = false;
-
+    showOnly(mainPages, pageId);
 }
 
 function goBack() {
-
     showPage("mainMenu");
-
 }
 
+// Fantasy subgenre navigation.
 function showGenre(genreId) {
-
-    document.getElementById("genreMenu").hidden = true;
-
-    document.getElementById(genreId).hidden = false;
-
+    showOnly(fantasyGenres, genreId);
 }
-
 
 function backToGenres() {
-
-    document.getElementById("epicFantasy").hidden = true;
-    document.getElementById("darkFantasy").hidden = true;
-    document.getElementById("urbanFantasy").hidden = true;
-
-    document.getElementById("genreMenu").hidden = false;
-
+    showGenre("genreMenu");
 }
 
+// Book recommendation navigation.
 function showBookGenre(bookGenreId) {
-
-    document.getElementById("bookMenu").hidden = true;
-
-    document.getElementById(bookGenreId).hidden = false;
-
+    showOnly(bookGenres, bookGenreId);
 }
-
 
 function backToBookMenu() {
-
-    document.getElementById("epicBooks").hidden = true;
-    document.getElementById("darkBooks").hidden = true;
-    document.getElementById("urbanBooks").hidden = true;
-
-    document.getElementById("bookMenu").hidden = false;
-
+    showBookGenre("bookMenu");
 }
